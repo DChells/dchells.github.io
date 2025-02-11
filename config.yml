@@ -1,0 +1,6 @@
+# _config.yml
+title: Daniel Chellings Portfolio
+description: "A showcase of my public projects, resume, and more."
+url: "https://dchells.github.io/"  # the base hostname & protocol for your site
+theme: minima  # using the built-in 'minima' theme for simplicity
+markdown: kramdown
