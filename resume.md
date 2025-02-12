@@ -7,7 +7,4 @@ title: Resume
 
 You can [download my resume (PDF)]({{ '/assets/resume.pdf' | relative_url }}) or view it below.
 
-<!-- To embed the PDF, uncomment the following iframe -->
-<!--
 <iframe src="{{ '/assets/resume.pdf' | relative_url }}" width="100%" height="600px"></iframe>
--->

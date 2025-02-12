@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       })
       .catch(error => {
+        console.error("Full error:", error);
         repoContainer.innerHTML = `<p>Error fetching repositories: ${error.message}</p>`;
-        console.error("Error fetching repositories:", error);
       });
   });
   
