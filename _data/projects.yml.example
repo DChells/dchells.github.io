@@ -1,0 +1,29 @@
+# Example project structure
+- name: Project Name
+  description: A brief description of the project
+  tech_stack:
+    - Python
+    - Flask
+    - SQLite
+  features:
+    - Feature 1 description
+    - Feature 2 description
+  github_url: https://github.com/username/project
+  demo_url: https://demo.example.com # Optional
+  image: /assets/images/projects/project-name.jpg # Optional
+  readme: |
+    # Project Name
+    
+    This is where you can put the full README content in markdown format.
+    It will be rendered properly on your site.
+    
+    ## Features
+    - Detailed feature 1
+    - Detailed feature 2
+    
+    ## Installation
+    ```bash
+    git clone https://github.com/username/project
+    cd project
+    npm install
+    ```

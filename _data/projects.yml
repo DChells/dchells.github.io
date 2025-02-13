@@ -1,0 +1,282 @@
+- name: US Traffic Accidents Analysis
+  description: >
+    This project analyzes a comprehensive dataset of US traffic accidents to identify patterns and predict accident severity using machine learning techniques. It combines data visualization, statistical modeling, and interactive exploration through R Shiny.
+  tech_stack:
+    - R
+    - XGBoost
+    - Leaflet
+    - R Shiny
+    - tidyverse
+    - ggplot2
+  features:
+    - Interactive map visualization with Leaflet
+    - Machine learning model for accident severity prediction using XGBoost
+    - Comprehensive statistical analysis of contributing factors
+    - Interactive dashboard built with R Shiny for data exploration
+  github_url: https://github.com/DChells/US-traffic-accident-analysis
+  readme: |
+    # US Traffic Accidents Analysis
+    
+    ## Overview
+    This project analyzes a comprehensive dataset of US traffic accidents to identify patterns and predict accident severity using machine learning techniques. The analysis combines data visualization, statistical modeling, and interactive exploration through R Shiny.
+    
+    ## Features
+    - **Interactive Map Visualization**: Using Leaflet to display accident locations and severity
+    - **Machine Learning Model**: XGBoost implementation for accident severity prediction
+    - **Statistical Analysis**: Comprehensive analysis of factors contributing to accidents
+    - **Interactive Dashboard**: R Shiny web application for exploring the data
+    
+    ## Technologies Used
+    - R
+    - XGBoost
+    - Leaflet
+    - R Shiny
+    - tidyverse
+    - ggplot2
+    
+    ## Dataset
+    The analysis uses the US Accidents dataset from Kaggle, which contains records of accidents across the United States. The dataset includes various features such as:
+    - Location coordinates
+    - Time and date
+    - Weather conditions
+    - Road features
+    - Severity levels
+    
+    Dataset source: [US Accidents (2016-2021)](https://www.kaggle.com/sobhanmoosavi/us-accidents)
+    
+    ## Project Structure
+    - `RSHINY.R`: Interactive web dashboard implementation
+    - `Project.Rmd`: Main analysis notebook with visualizations and modeling
+    - Additional supporting files for analysis and visualization
+    
+    ## Getting Started
+    1. Clone this repository
+    2. Download the dataset from Kaggle
+    3. Place the dataset file in the `datasets` directory
+    4. Install required R packages:
+       ```R
+       install.packages(c("shiny", "leaflet", "tidyverse", "xgboost", "ggplot2"))
+       ```
+    
+    ## Original Context
+    This project was developed as part of MGSC 310 (Machine Learning for Business) coursework, demonstrating practical applications of machine learning in transportation safety analysis.
+    
+    ## License
+    This project is open source and available under the [MIT License](LICENSE).
+    ```
+
+- name: Neural Guitar Music Generation
+  description: >
+    A deep learning project that generates guitar music across multiple
+    styles using LSTM neural networks. Originally created for CPSC 393 at
+    Chapman University.
+  tech_stack:
+    - Python
+    - TensorFlow/Keras
+    - music21
+    - NumPy
+    - BeautifulSoup4
+    - Matplotlib
+  features:
+    - Processes and analyzes MIDI files using music21
+    - Visualizes musical patterns and note distributions
+    - Generates music using a deep LSTM network
+    - Scrapes and processes MIDI files from various online sources
+    - Outputs new musical compositions in MIDI format
+  github_url: https://github.com/DChells/neural-guitar-generation
+  readme: |
+    # Neural Guitar Music Generation
+
+    A deep learning project that generates guitar music across multiple styles (classical, metal, and more) using LSTM neural networks. Originally created for CPSC 393 (Machine Learning) at Chapman University.
+
+    ## Overview
+
+    This project uses deep learning to generate new guitar compositions by training on a dataset of MIDI files. The model learns patterns from existing pieces across different guitar styles to create musical sequences while maintaining musical coherence and structure.
+
+    ## Features
+
+    - MIDI file processing and analysis using `music21`
+    - Data visualization of musical patterns and note distributions
+    - LSTM neural network architecture for sequence generation
+    - Support for downloading and processing MIDI files from various sources
+    - Generation of new musical compositions in MIDI format
+
+    ## Technologies Used
+
+    - Python
+    - TensorFlow/Keras
+    - music21
+    - NumPy
+    - BeautifulSoup4
+    - Matplotlib
+
+    ## Dataset
+
+    The model was trained on MIDI files collected from various sources including:
+    - Classical guitar compositions
+    - Metal guitar arrangements
+    - Irish traditional music
+    - Maestro dataset
+
+    ## Installation
+
+    ```bash
+    # Clone the repository
+    git clone https://github.com/yourusername/neural-guitar-generation.git
+
+    # Install required packages
+    pip install -r requirements.txt
+
+    # Install additional dependencies
+    pip install music21 tensorflow numpy matplotlib beautifulsoup4
+    ```
+
+    ## Usage
+
+    1. **Data Collection**:
+       ```bash
+       # Run the MIDI scraper to collect training data
+       python midi_scrape.py
+       ```
+    2. **Data Preprocessing**:
+       - Process the collected MIDI files using `music21` to extract notes and chords.
+       - Create sequences of 100 notes to be used as input for the model.
+    3. **Training the Model**:
+       ```bash
+       # Launch the Jupyter notebook
+       jupyter notebook FinalProjectStructure.ipynb
+       ```
+       - The notebook contains the complete pipeline for training the model.
+       - Model checkpoints are saved during training.
+    4. **Generating Music**:
+       - Load a trained model.
+       - Generate new musical sequences using random seed notes.
+       - Convert generated sequences back to MIDI format and save in the `output/` directory.
+
+    ## Project Structure
+
+    ```
+    project/
+    ├── FinalProjectStructure.ipynb    # Main notebook with model implementation
+    ├── midi_scrape.py                 # Script for downloading MIDI files
+    ├── README.md                      # Project documentation
+    ├── Resources.txt                  # List of data sources and references
+    ├── datasets/                      # Directory containing training data
+    │   ├── midi_songs2_classical/      # Classical guitar MIDI files
+    │   ├── midi_songs3_metal/          # Metal arrangements
+    │   └── midi_songs_maestro/         # Maestro dataset files
+    ├── midi_data/                     # Processed MIDI data
+    ├── Models/                        # Saved model checkpoints
+    ├── output/                        # Generated MIDI compositions
+    └── Finalized Output/               # Final generated pieces
+    ```
+
+    ## Results
+
+    - Implemented a deep LSTM network with 2 layers of 512 units each.
+    - Achieved approximately 4 million trainable parameters.
+    - Successfully generated coherent musical sequences across distinct musical styles.
+
+    ## Future Improvements
+
+    - Incorporate attention mechanisms for enhanced long-term dependency learning.
+    - Experiment with transformer architectures.
+    - Enhance chord recognition and support for more complex musical structures.
+    - Implement interactive music generation with real-time MIDI playback.
+
+    ## Acknowledgments
+
+    Special thanks to the music21 development team, contributors to the Maestro dataset, and the Chapman University Computer Science Department.
+    ```
+
+- name: Melody AI
+  description: "A collection of AI tools designed to aid in music creation. This project integrates a VexFlow Generator for sheet music, a Midi Maker to create and play MIDI files from song titles, and a MIDI Piano Editor for editing and autocompletion (currently a work in progress)."
+  tech_stack:
+    - React
+    - Next.js
+    - OpenAI API
+    - Python (music21)
+    - VexFlow
+    - midi-player-js
+  github_url: https://github.com/DChells/melody-ai
+  demo_url: https://lovely-sunshine-ac0e9d.netlify.app/
+  readme: |
+    # Melody AI
+
+    A collection of AI-powered tools to assist in music creation.
+
+    ## Features
+
+    - **VexFlow Generator**: Generate sheet music using GPT-3.5 output and render it with VexFlow.
+    - **Midi Maker**: Create and play MIDI files based on a provided song title.
+    - **MIDI Piano Editor**: Edit and autocomplete MIDI files with AI support (feature in progress).
+    - **Theme Customization**: Seamlessly switch between dark and light mode.
+
+    ## Technologies Used
+
+    - **Frontend**: React, Next.js, styled-components.
+    - **Backend**: Python (music21 for MIDI processing), OpenAI API.
+    - **Libraries**: VexFlow, midi-player-js, midi-writer-js.
+
+    ## Installation
+
+    ```bash
+    git clone https://github.com/username/melody-ai
+    cd melody-ai
+    npm install
+    npm run dev
+    ```
+
+- name: Decentralized Market Manager (DMM)
+  description: >
+    An innovative decentralized exchange (DEX) platform that empowers users to trade digital assets directly
+    from their wallets using an Automated Market Maker (AMM) model. The platform also integrates a Treasury
+    contract for liquidity provisioning and a price oracle for real-time market price discovery.
+  tech_stack:
+    - Solidity
+    - Ethereum
+    - OpenZeppelin Contracts
+    - DeFi
+  features:
+    - Decentralized and non-custodial asset trading
+    - Liquidity provision via a dedicated Treasury contract
+    - Automated Market Maker (AMM) for seamless token swaps
+    - Integration with a price oracle for accurate, real-time pricing
+    - Support for flexible asset management and future protocol enhancements
+  github_url: https://github.com/username/decentralized-market-manager
+  readme: |
+    # Decentralized Market Manager (DMM)
+    
+    Decentralized Market Manager (DMM) is an innovative decentralized exchange (DEX) platform that
+    allows users to trade various digital assets directly from their wallets. The platform utilizes an
+    Automated Market Maker (AMM) model to enable seamless swapping of tokens, and provides users with an
+    opportunity to add liquidity to the platform in exchange for rewards. Additionally, the DMM implements
+    a Treasury Contract to attract liquidity from investors, further enhancing the platform's liquidity.
+    
+    ## Features
+    - **Decentralized Trading:** Engage in non-custodial trading of digital assets without intermediaries.
+    - **Liquidity Provision:** Add or remove liquidity through an integrated treasury contract, ensuring
+      optimal platform funding and performance.
+    - **Price Oracle Integration:** Utilize a price oracle to fetch real-world market prices, enhancing
+      price discovery and reducing manipulation risks.
+    - **Flexible Asset Swapping:** Trade a wide range of digital assets seamlessly using the AMM model.
+    
+    ## Getting Started
+    1. Install the MetaMask browser extension and connect to a supported Ethereum test network (e.g., Rinkeby, Ropsten, Kovan, or Goerli).
+    2. Obtain test Ether from a corresponding faucet.
+    3. Deploy the TestTokenA and TestTokenB smart contracts using Remix IDE or another deployment tool.
+    4. Add the deployed test tokens to MetaMask ensuring a sufficient balance.
+    5. Deploy a custom price oracle smart contract (if required) and record its address.
+    6. Deploy the AMM DEX smart contract, providing the addresses of the test tokens and the price oracle.
+    7. Interact with the DEX using Remix IDE, Etherscan, or a custom frontend.
+    
+    ## Future Enhancements
+    - Expand support for additional digital assets.
+    - Enhance price oracle functionality (e.g., implement time-weighted average prices (TWAPs)).
+    - Develop more complex liquidity incentives like yield farming or liquidity mining.
+    - Improve the user interface and integrate community governance mechanisms.
+    
+    ## References
+    - OpenZeppelin Contracts
+    - ChatGPT version 3.5
+    ```
