@@ -3,70 +3,92 @@ layout: default
 title: Home
 ---
 
-# Daniel Chelling
+<div class="hero-section">
+  <h1 class="hero-title">Daniel Chelling</h1>
+  <p class="hero-subtitle">Data Analytics Professional</p>
+  <p class="hero-description">B.S. in Data Analytics from Chapman University, specializing in machine learning, statistical analysis, and data visualization.</p>
+</div>
 
-## About Me
+<section class="skills-section">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Programming</h3>
+      <ul>
+        <li>Python</li>
+        <li>R</li>
+        <li>JavaScript</li>
+        <li>Solidity</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Data Science & ML</h3>
+      <ul>
+        <li>TensorFlow/Keras</li>
+        <li>XGBoost</li>
+        <li>Statistical Modeling</li>
+        <li>LSTM Networks</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Visualization</h3>
+      <ul>
+        <li>R Shiny</li>
+        <li>ggplot2</li>
+        <li>Leaflet</li>
+        <li>Matplotlib</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Web Development</h3>
+      <ul>
+        <li>React</li>
+        <li>Next.js</li>
+        <li>Node.js</li>
+        <li>REST APIs</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-I'm Daniel Chelling a data analytics professional. I earned my B.S. in Data Analytics from Chapman University and am furthering my expertise in Data Analytics. 
+<section class="featured-projects">
+  <h2>Featured Projects</h2>
+  {% assign featured_projects = site.data.projects | slice: 0, 3 %}
+  <div class="project-grid">
+    {% for project in featured_projects %}
+    <div class="project-preview">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      <div class="tech-tags">
+        {% for tech in project.tech_stack | slice: 0, 4 %}
+        <span class="tech-tag">{{ tech }}</span>
+        {% endfor %}
+      </div>
+      <a href="{{ '/projects' | relative_url }}#{{ project.name | slugify }}" class="project-link">View Details</a>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="{{ '/projects' | relative_url }}" class="view-all-btn">View All Projects</a>
+</section>
 
-## Featured Projects
-
-{% assign featured_projects = site.data.projects | slice: 0, 2 %}
-{% for project in featured_projects %}
-### {{ project.name }}
-{{ project.description }}
-
-**Technologies:** {% for tech in project.tech_stack | slice: 0, 3 %}{{ tech }}{% unless forloop.last %}, {% endunless %}{% endfor %}
-
-[View Project Details →]({{ '/projects' | relative_url }}#{{ project.name | slugify }})
-
-{% endfor %}
-
-## Connect With Me
-
-- ✉️ [Email](mailto:danielchelling@gmail.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/daniel-chelling-501a71200/)
-- 💻 [GitHub](https://github.com/DChells)
-- 📄 [Resume]({{ '/resume' | relative_url }})
-
-<style>
-/* Minimal styling to enhance readability while keeping it simple */
-h1 {
-  margin-bottom: 0.5rem;
-}
-
-h1 + p {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-h2 {
-  margin-top: 2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #eee;
-}
-
-h3 {
-  margin-top: 1.5rem;
-  color: #2c3e50;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin: 0.5rem 0;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-</style>
+<section class="contact-section">
+  <h2>Get in Touch</h2>
+  <div class="contact-links">
+    <a href="mailto:danielchelling@gmail.com" class="contact-link">
+      <span class="link-label">Email</span>
+      <span class="link-value">danielchelling@gmail.com</span>
+    </a>
+    <a href="https://www.linkedin.com/in/daniel-chelling-501a71200/" class="contact-link" target="_blank" rel="noopener">
+      <span class="link-label">LinkedIn</span>
+      <span class="link-value">daniel-chelling</span>
+    </a>
+    <a href="https://github.com/DChells" class="contact-link" target="_blank" rel="noopener">
+      <span class="link-label">GitHub</span>
+      <span class="link-value">@DChells</span>
+    </a>
+    <a href="{{ '/resume' | relative_url }}" class="contact-link">
+      <span class="link-label">Resume</span>
+      <span class="link-value">Download PDF</span>
+    </a>
+  </div>
+</section>
